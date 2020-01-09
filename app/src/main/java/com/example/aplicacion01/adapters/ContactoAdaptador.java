@@ -50,9 +50,9 @@ public class ContactoAdaptador extends ArrayAdapter<Contacto> {
         }
         holder.phone.setText(rowItem.phone);
         holder.nickname.setText(rowItem.nickname);
-        if ( rowItem.getSmallImage() != null ) { //<----- El modelo debe poseer esta function
+        /*if ( rowItem.getSmallImage() != null ) { //<----- El modelo debe poseer esta function
             holder.image.setImageUrl(rowItem.getSmallImage(), queue);
-        }
+        }*/
         return convertView;
     }
 }
