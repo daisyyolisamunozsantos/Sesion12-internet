@@ -10,6 +10,7 @@ import com.example.aplicacion01.helpers.QueueUtils;
 import com.example.aplicacion01.models.Contacto;
 
 import java.util.ArrayList;
+import java.util.Queue;
 
 public class MainActivity extends AppCompatActivity {
     ListView contactosList;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         contactoAdaptador = new ContactoAdaptador(this,items, queue.getImageLoader());
         contactosList.setAdapter(contactoAdaptador);
-
+        Contacto.sendRequestPOST(queue, this);
     }
     public void refreshList(){
         if ( contactoAdaptador!= null ) {
